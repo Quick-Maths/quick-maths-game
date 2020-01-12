@@ -15,11 +15,11 @@ class ApplicationMain
 	#if !macro
 	public static function main()
 	{
-		lime.system.System.__registerEntryPoint(".", create);
+		lime.system.System.__registerEntryPoint("quick-maths-game", create);
 
 		#if (js && html5)
 		#if (munit || utest)
-		lime.system.System.embed(".", null, 640, 480);
+		lime.system.System.embed("quick-maths-game", null, 640, 480);
 		#end
 		#else
 		create(null);
@@ -32,10 +32,10 @@ class ApplicationMain
 
 		ManifestResources.init(config);
 
-		app.meta["build"] = "1";
-		app.meta["company"] = "HaxeFlixel";
-		app.meta["file"] = ".";
-		app.meta["name"] = ".";
+		app.meta["build"] = "2";
+		app.meta["company"] = "Quick Maths";
+		app.meta["file"] = "quick-maths-game";
+		app.meta["name"] = "quick maths game";
 		app.meta["packageName"] = "com.example.myapp";
 		app.meta["version"] = "0.0.1";
 
@@ -57,7 +57,7 @@ class ApplicationMain
 			minimized: false,
 			parameters: {},
 			resizable: false,
-			title: ".",
+			title: "quick maths game",
 			width: 640,
 			x: null,
 			y: null,
